@@ -1,13 +1,15 @@
-<ion-view title="Sessions">
+<ion-view title="Sessions" hide-nav-bar="false" hide-back-button="false">
+        <ion-content class="padding">
        <ion-list>
     <ion-item ng-repeat="session in sessions">
-        <a ui-sref="tabs.register">
+
          {{session.Name}}   <br />      
         <label> {{session.Start | date:'medium'}} </label>  
-            </a>   
+ 
      </ion-item>
 
     </ion-list>
+  </ion-content>
 </ion-view>
 
 

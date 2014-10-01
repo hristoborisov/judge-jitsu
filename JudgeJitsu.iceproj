@@ -220,7 +220,12 @@
     <Content Include="cordova.ios.js" />
     <Content Include="cordova.wp8.js" />
     <Content Include="index.html" />
-    <Content Include="js\Controllers\MainController.js" />
+    <Content Include="js\Controllers\ScheduleController.js" />
+    <Content Include="js\Controllers\RegisterController.js" />
+    <Content Include="views\register.html" />
+    <Content Include="views\tabs.html" />
+    <Content Include="views\sessions.html" />
+    <Content Include="views\schedule.html" />
     <Resource Include="App_Resources\Android\drawable-hdpi\icon.png" />
     <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
     <Resource Include="App_Resources\Android\drawable-mdpi\icon.png" />
@@ -250,9 +255,7 @@
     <Resource Include="App_Resources\WP8\SplashScreenImage.jpg" />
     <Resource Include="App_Resources\WP8\Tiles\Iconic\110x110.png" />
     <Resource Include="App_Resources\WP8\Tiles\Iconic\202x202.png" />
-    <Content Include="css\index.css" />
-    <Content Include="img\cordova.png" />
-    <Content Include="img\logo.png" />
+    <Content Include="css\main.css" />
     <Content Include="js\app.js" />
   </ItemGroup>
   <ItemGroup>
@@ -306,9 +309,9 @@
     <Folder Include="bower_components\mockfirebase\" />
     <Folder Include="bower_components\mockfirebase\dist\" />
     <Folder Include="css\" />
-    <Folder Include="img\" />
     <Folder Include="js\" />
     <Folder Include="js\Controllers\" />
+    <Folder Include="views\" />
     <Folder Include="Plugins\" />
   </ItemGroup>
   <Import Project="$(IceniumTargets)Build.targets" />

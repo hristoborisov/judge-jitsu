@@ -1,19 +1,24 @@
 (function () {
-    var app = angular.module("JudgeJitsu", ["ionic"]);
+    var app = angular.module("JudgeJitsu", ["ionic", "firebase"]);
 
     app.config(function ($stateProvider, $urlRouterProvider) {
 
         $stateProvider
-          .state('register', {
-              url: "/register",
+            .state('tabs', {
+                url: "/tab",
+                abstract: true,
+                templateUrl: "views/tabs.html"
+            })
+          .state('tabs.sessions', {
+              url: "/sessions",
               views: {
-                  'register-tab': {
-                      templateUrl: "views/register.html",
+                  'sessions-tab': {
+                      templateUrl: "views/sessions.html",
                       controller: 'RegisterController'
                   }
               }
           })
-        .state('schedule', {
+        .state('tabs.schedule', {
             url: "/schedule",
             views: {
                 'schedule-tab': {
@@ -21,9 +26,18 @@
                     controller: 'ScheduleController'
                 }
             }
-        });
+        })
+         .state('tabs.register', {
+             url: "/register",
+             views: {
+                 'sessions-tab': {
+                     templateUrl: "views/register.html",
+                     controller: 'RegisterController'
+                 }
+             }
+         });
 
-        $urlRouterProvider.otherwise("/register");
+        $urlRouterProvider.otherwise("/tab/sessions");
     });
 
 })();

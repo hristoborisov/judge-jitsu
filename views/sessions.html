@@ -1,0 +1,13 @@
+<ion-view title="Sessions">
+       <ion-list>
+    <ion-item ng-repeat="session in sessions">
+        <a ui-sref="tabs.register">
+         {{session.Name}}   <br />      
+        <label> {{session.Start | date:'medium'}} </label>  
+            </a>   
+     </ion-item>
+
+    </ion-list>
+</ion-view>
+
+

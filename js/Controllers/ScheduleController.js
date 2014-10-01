@@ -4,6 +4,6 @@
     };
 
     var app = angular.module("JudgeJitsu");
-    app.controller("MainController", ["$scope", scheduleController]);
+    app.controller("ScheduleController", ["$scope", scheduleController]);
 
 })();
